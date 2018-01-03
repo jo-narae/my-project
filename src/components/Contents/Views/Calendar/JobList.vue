@@ -2,18 +2,15 @@
   <div class="card card-user">
     <div class="content">
       <div class="content-job-list">
-        <p class="title-job-list">JOB LIST</p>
+        <a class="badge btn-job-add">Add</a>
+        <div class="center-job-list">
+          <span class="title-job-list"> JOB LIST </span>
+        </div>
         <div class="margin-job-list" v-for="work in jobListData">
           <button type="submit" class="btn btn-sm ellipsis full-job-list">
             {{work.text}}
           </button>
         </div>
-      </div>
-      <hr />
-      <div class="footer-job-list">
-        <button type="submit" class="btn btn-sm btn-fill full-job-list">
-          <i class="fa fa-plus"></i>
-        </button>
       </div>
     </div>
   </div>
@@ -37,13 +34,8 @@
 
 </script>
 <style scoped>
-  hr {
-    margin-left: 0px !important;
-    min-width: 100% !important;
-  }
-
-  .content-job-list {
-    margin-bottom: 20px;
+  .center-job-list {
+    text-align: center !important;
   }
   .full-job-list {
     min-width: 100%;
@@ -56,15 +48,14 @@
   }
   .title-job-list {
     font-weight: bold;
-    text-align: center;
     margin-bottom: 15px;
-  }
-  .footer-job-list {
-    font-weight: bold;
-    text-align: center;
-    margin-top: 15px;
   }
   .margin-job-list {
     margin: 10px 0px 10px;
+  }
+  .btn-job-add {
+    position: absolute;
+    font-size: 10px;
+    margin-left: 65%;
   }
 </style>
