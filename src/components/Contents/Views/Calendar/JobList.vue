@@ -1,11 +1,20 @@
 <template>
   <div class="card card-user">
     <div class="content">
-      <p class="title-job-list">JOB LIST</p>
-      <div class="margin-job-list" v-for="work in jobListData">
-        <b-button size="sm" class="ellipsis">{{work.text}}</b-button>
+      <div class="content-job-list">
+        <p class="title-job-list">JOB LIST</p>
+        <div class="margin-job-list" v-for="work in jobListData">
+          <button type="submit" class="btn btn-sm ellipsis full-job-list">
+            {{work.text}}
+          </button>
+        </div>
       </div>
-      <div class="footer-job-list">+</div>
+      <hr />
+      <div class="footer-job-list">
+        <button type="submit" class="btn btn-sm btn-fill full-job-list">
+          <i class="fa fa-plus"></i>
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -28,6 +37,17 @@
 
 </script>
 <style scoped>
+  hr {
+    margin-left: 0px !important;
+    min-width: 100% !important;
+  }
+
+  .content-job-list {
+    margin-bottom: 20px;
+  }
+  .full-job-list {
+    min-width: 100%;
+  }
   .ellipsis {
     max-width: 100%;
     white-space: nowrap;
