@@ -1,53 +1,50 @@
 <template>
   <div class="card card-user">
     <div class="content">
-      <md-list>
-        <md-list-item>1</md-list-item>
-        <md-list-item>1</md-list-item>
-        <md-list-item>1</md-list-item>
-      </md-list>
+      <p class="title-job-list">JOB LIST</p>
+      <div class="margin-job-list" v-for="work in jobListData">
+        <b-button size="sm" class="ellipsis">{{work.text}}</b-button>
+      </div>
+      <div class="footer-job-list">+</div>
     </div>
   </div>
 </template>
-<script scoped>
-  import VueMaterial from 'vue-material'
+<script>
   export default {
-    components: {
-      VueMaterial
-    },
     data () {
       return {
-        details: [
-          {
-            title: '12',
-            subTitle: 'Files'
-          },
-          {
-            title: '2GB',
-            subTitle: 'Used'
-          },
-          {
-            title: '24,6$',
-            subTitle: 'Spent'
-          }
+        jobListData: [
+          {text: 'design'},
+          {text: 'implement'},
+          {text: 'test'},
+          {text: 'job event management'},
+          {text: 'job event management job event managementjob event managementjob event managementjob event managementjob event managementjob event management'}
         ]
       }
     },
     methods: {
-      getClasses (index) {
-        var remainder = index % 3
-        if (remainder === 0) {
-          return 'col-md-3 col-md-offset-1'
-        } else if (remainder === 2) {
-          return 'col-md-4'
-        } else {
-          return 'col-md-3'
-        }
-      }
     }
   }
 
 </script>
-<style>
-
+<style scoped>
+  .ellipsis {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .title-job-list {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .footer-job-list {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+  }
+  .margin-job-list {
+    margin: 10px 0px 10px;
+  }
 </style>

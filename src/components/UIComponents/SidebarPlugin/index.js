@@ -15,7 +15,7 @@ const SidebarStore = {
     },
     {
       name: 'Calendar',
-      icon: 'ti-calendar',
+      icon: 'fa fa-calendar',
       path: '/admin/calendar'
     },
     {
@@ -25,7 +25,7 @@ const SidebarStore = {
     },
     {
       name: 'User Profile',
-      icon: 'ti-user',
+      icon: 'fa fa-user',
       path: '/admin/stats'
     },
     {
