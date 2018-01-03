@@ -1,23 +1,34 @@
 <template>
   <div class="row">
     <div class="col-lg-2 col-md-3">
-      <job-list :jobListData="jobListData">
-      </job-list>
+      <div class="card card-user">
+        <div class="content">
+          <div class="content-job-list">
+            <a class="badge btn-job-add">Add</a>
+            <div class="center-job-list">
+              <span class="title-job-list"> JOB LIST </span>
+            </div>
+            <div class="margin-job-list" v-for="work in jobListData">
+              <button type="submit" class="btn btn-sm ellipsis full-job-list"
+                      draggable="true">
+                {{work.text}}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="col-lg-10 col-md-9">
-      <job-calendar :jobEvents="jobEvents">
-      </job-calendar>
+      <div class="card">
+        <div class="content">
+          <div id='calendar'></div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 <script>
-  import JobList from './Calendar/JobList.vue'
-  import JobCalendar from './Calendar/JobCalendar.vue'
   export default {
-    components: {
-      JobList,
-      JobCalendar
-    },
     data () {
       return {
         jobListData: [
@@ -93,12 +104,63 @@
             url: 'http://google.com/',
             start: '2017-12-28'
           }
-        ]
+        ],
+        events: []
+      }
+    },
+    mounted: function () {
+      this.initCalendar()
+    },
+    methods: {
+      initCalendar () {
+        var me = this
+        me.events = me.jobEvents
+        jQuery('#calendar').fullCalendar({
+          header: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'month,agendaWeek,agendaDay,listWeek'
+          },
+          defaultDate: '2017-12-12',
+          navLinks: true, // can click day/week names to navigate views
+          eventLimit: true, // allow "more" link when too many events
+          events: me.events,
+          editable: true,
+          eventDrop: function (event, delta, revertFunc) {
+            alert(event.start.format())
+            if (!confirm('Are you sure about this change?')) {
+              revertFunc()
+            }
+          }
+        })
       }
     }
   }
 
 </script>
-<style>
-
+<style scoped>
+.center-job-list {
+    text-align: center !important;
+  }
+  .full-job-list {
+    min-width: 100%;
+  }
+  .ellipsis {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .title-job-list {
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  .margin-job-list {
+    margin: 10px 0px 10px;
+  }
+  .btn-job-add {
+    position: absolute;
+    font-size: 10px;
+    margin-left: 65%;
+  }
 </style>
