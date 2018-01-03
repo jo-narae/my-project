@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import VueMaterial from 'vue-material'
 import vClickOutside from 'v-click-outside'
 
 // Plugins
@@ -20,7 +19,6 @@ import 'es6-promise/auto'
 
 // plugin setup
 Vue.use(VueRouter)
-Vue.use(VueMaterial)
 Vue.use(GlobalComponents)
 Vue.use(vClickOutside)
 Vue.use(Notifications)

@@ -1,16 +1,20 @@
 <template>
   <div class="card card-user">
     <div class="content">
-      <p class="description text-center">
-        "I like the way you work it
-        <br> No diggity
-        <br> I wanna bag it up"
-      </p>
+      <md-list>
+        <md-list-item>1</md-list-item>
+        <md-list-item>1</md-list-item>
+        <md-list-item>1</md-list-item>
+      </md-list>
     </div>
   </div>
 </template>
-<script>
+<script scoped>
+  import VueMaterial from 'vue-material'
   export default {
+    components: {
+      VueMaterial
+    },
     data () {
       return {
         details: [

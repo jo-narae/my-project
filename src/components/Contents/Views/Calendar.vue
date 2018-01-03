@@ -6,20 +6,19 @@
       </job-list>
     </div>
     <div class="col-lg-10 col-md-9">
-      <edit-profile-form>
+      <job-calendar>
 
-      </edit-profile-form>
+      </job-calendar>
     </div>
   </div>
 </template>
 <script>
-  import EditProfileForm from './UserProfile/EditProfileForm.vue'
   import JobList from './Calendar/JobList.vue'
+  import JobCalendar from './Calendar/JobCalendar.vue'
   export default {
     components: {
-      EditProfileForm,
       JobList,
-      MembersCard
+      JobCalendar
     }
   }
 
