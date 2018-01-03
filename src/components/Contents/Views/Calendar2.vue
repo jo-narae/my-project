@@ -92,6 +92,17 @@
             id: 10,
             title: 'Dinner',
             start: '2017-12-12T20:00:00'
+          },
+          {
+            id: 11,
+            title: 'Birthday Party',
+            start: '2017-12-13T07:00:00'
+          },
+          {
+            id: 12,
+            title: 'Click for Google',
+            url: 'http://google.com/',
+            start: '2017-12-28'
           }
         ],
         events: []

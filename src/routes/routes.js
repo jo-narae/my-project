@@ -5,6 +5,7 @@ import NotFound from '../components/GeneralViews/NotFoundPage.vue'
 // Admin pages
 import Overview from 'src/components/Contents/Views/Overview.vue'
 import Calendar from 'src/components/Contents/Views/Calendar.vue'
+import Calendar2 from 'src/components/Contents/Views/Calendar2.vue'
 import Dashboard from 'src/components/Contents/Views/Dashboard.vue'
 import UserProfile from 'src/components/Contents/Views/UserProfile.vue'
 import Notifications from 'src/components/Contents/Views/Notifications.vue'
@@ -38,6 +39,11 @@ const routes = [
         path: 'calendar',
         name: 'Calendar',
         component: Calendar
+      },
+      {
+        path: 'calendar_orgin',
+        name: 'Calendar Backup',
+        component: Calendar2
       },
       {
         path: 'dashboard',
