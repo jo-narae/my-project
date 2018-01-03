@@ -7,7 +7,8 @@
           <span class="title-job-list"> JOB LIST </span>
         </div>
         <div class="margin-job-list" v-for="work in jobListData">
-          <button type="submit" class="btn btn-sm ellipsis full-job-list">
+          <button type="submit" class="btn btn-sm ellipsis full-job-list"
+                  draggable="true">
             {{work.text}}
           </button>
         </div>
@@ -17,15 +18,11 @@
 </template>
 <script>
   export default {
+    props: {
+      jobListData: Array
+    },
     data () {
       return {
-        jobListData: [
-          {text: 'design'},
-          {text: 'implement'},
-          {text: 'test'},
-          {text: 'job event management'},
-          {text: 'job event management job event managementjob event managementjob event managementjob event managementjob event managementjob event management'}
-        ]
       }
     },
     methods: {
