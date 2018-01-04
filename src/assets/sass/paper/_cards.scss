@@ -154,7 +154,22 @@
     }
   }
 }
-
+/** feed comment add : Na-Rae Jo */
+.card-feed-comment {
+  border-radius: $border-radius-large-bottom;
+  background-color: $brown-fill-bg;
+  border-top: 1px solid $brown-top-border;
+}
+.width-feed-comment {
+  margin-left: 1%;
+  max-width: 98%;
+}
+.width-feed-comment div.card:first-child {
+  margin-top: 20px;
+}
+.width-feed-comment div.card {
+  padding: 10px;
+}
 .card-user {
   .image {
     border-radius: 8px 8px 0 0;

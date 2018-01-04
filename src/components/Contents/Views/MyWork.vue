@@ -14,18 +14,24 @@
               </ul>
             </div>
           </div>
+          <div class="description feed-content-title card-feed-name">
+            UI/UX Design
+          </div>
           <div class="description">
-            "I like the way you work it No diggity I wanna bag it up"
+            I like the way you work it No diggity I wanna bag it up
           </div>
         </div>
-        <hr>
-        <div class="text-center">
-          <div class="row">
-            <div v-for="(info,index) in details" :class="getClasses(index)">
-              <h5>{{info.title}}
-                <br>
-                <small>{{info.subTitle}}</small>
-              </h5>
+        <div class="card-feed-comment">
+          <div class="row width-feed-comment">
+            <div class="card">
+              코멘트가 없습니다.
+            </div>
+            <div class="card">
+              <div>타이틀</div>
+              111
+            </div>
+            <div class="card">
+              111
             </div>
           </div>
         </div>
@@ -127,6 +133,9 @@
   }
 
 </script>
-<style>
-
+<style scoped>
+  .feed-content-title {
+    margin-top: 20px;
+    color: #000000 !important;
+  }
 </style>
