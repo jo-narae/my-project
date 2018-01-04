@@ -8,8 +8,13 @@
             <div class="center-job-list">
               <span class="title-job-list"> Event Filter </span>
             </div>
+            <div class="margin-job-list">
+              <button type="submit" class="btn btn-sm btn-fill ellipsis full-job-list">
+                ALL
+              </button>
+            </div>
             <div class="margin-job-list" v-for="work in jobListData">
-              <button type="submit" class="btn btn-sm btn-fill ellipsis full-job-list" draggable="true"
+              <button type="submit" class="btn btn-sm btn-fill ellipsis full-job-list"
                       :class="{ 'job-event-primary' : work.color == 'primary', 'job-event-success' : work.color == 'success', 'job-event-info' : work.color == 'info',
                                 'job-event-warning' : work.color == 'warning', 'job-event-danger' : work.color == 'danger' }">
                 {{work.text}}
@@ -43,72 +48,72 @@
           {
             id: 1,
             title: 'All Day Event',
-            start: '2017-12-01',
-            end: '2017-12-17',
+            start: '2018-01-01',
+            end: '2018-01-17',
             color: 'info'
           },
           {
             id: 2,
             title: 'Long Event',
-            start: '2017-12-07',
-            end: '2017-12-10',
+            start: '2018-01-07',
+            end: '2018-01-10',
             color: 'primary'
           },
           {
             id: 3,
             title: 'Repeating Event',
-            start: '2017-12-09T16:00:00',
+            start: '2018-01-09T16:00:00',
             color: 'success'
           },
           {
             id: 4,
             title: 'Repeating Event',
-            start: '2017-12-16T16:00:00',
+            start: '2018-01-16T16:00:00',
             color: 'warning'
           },
           {
             id: 5,
             title: 'Conference',
-            start: '2017-12-11',
-            end: '2017-12-13',
+            start: '2018-01-11',
+            end: '2018-01-13',
             color: 'danger'
           },
           {
             id: 6,
             title: 'Meeting',
-            start: '2017-12-12T10:30:00',
-            end: '2017-12-12T12:30:00'
+            start: '2018-01-12T10:30:00',
+            end: '2018-01-12T12:30:00'
           },
           {
             id: 7,
             title: 'Lunch',
-            start: '2017-12-12T12:00:00'
+            start: '2018-01-12T12:00:00'
           },
           {
             id: 8,
             title: 'Meeting',
-            start: '2017-12-12T14:30:00'
+            start: '2018-01-12T14:30:00'
           },
           {
             id: 9,
             title: 'Happy Hour',
-            start: '2017-12-12T17:30:00'
+            start: '2018-01-12T17:30:00'
           },
           {
             id: 10,
             title: 'Dinner',
-            start: '2017-12-12T20:00:00'
+            start: '2018-01-12T20:00:00'
           },
           {
             id: 11,
             title: 'Birthday Party',
-            start: '2017-12-13T07:00:00'
+            start: '2018-01-13T07:00:00'
           },
           {
             id: 12,
             title: 'Click for Google',
             url: 'http://google.com/',
-            start: '2017-12-28'
+            start: '2018-01-28'
           }
         ]
       }
@@ -125,7 +130,6 @@
             center: 'title',
             right: 'month,agendaWeek,agendaDay,listWeek'
           },
-          defaultDate: '2017-12-12',
           navLinks: true, // can click day/week names to navigate views
           eventLimit: true, // allow "more" link when too many events
           events: me.jobEvents,
