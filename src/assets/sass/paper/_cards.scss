@@ -244,3 +244,22 @@
     border-radius: 4px;
   }
 }
+
+/** feed style add : Na-Rae Jo */
+.card-feed ul {
+  margin: 0 0 0 0;
+  list-style:none;
+}
+.card-feed .card-feed-avatar {
+  margin-left: 0px !important;
+  margin-right: 10px;
+  float: left;
+  position: absolute;
+}
+.card-feed-info ul {
+  margin-left: 20px;
+}
+.card-feed-name {
+  font-size: 20px;
+  font-weight: bold;
+}
