@@ -12,7 +12,7 @@
           </button>
           <router-link :to="{path:'/'}" class="navbar-brand">Site title</router-link>
         </div>
-  
+
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navigation-example-2">
           <ul class="nav navbar-nav navbar-right">
@@ -26,7 +26,7 @@
       <!-- /.container-->
     </nav>
     <div class="wrapper wrapper-full-page section content">
-      <div class="">
+      <div>
         <div class="container">
           <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center">

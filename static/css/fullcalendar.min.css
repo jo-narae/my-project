@@ -285,11 +285,33 @@ a[data-goto]:hover {
   font-size: .85em;
   line-height: 1.3;
   border-radius: 3px;
-  border: 1px solid #66615B
 }
 
 .fc-event, .fc-event-dot {
-  background-color: #66615B
+  border: 1px solid #66615B;
+  background-color: #66615B;
+}
+
+/* event color add : Na-Rae Jo */
+.fc-primary {
+  border: 1px solid #427C89;
+  background-color: #427C89;
+}
+.fc-success {
+  border: 1px solid #229863;
+  background-color: #229863;
+}
+.fc-info {
+  border: 1px solid #3091B2;
+  background-color: #3091B2;
+}
+.fc-warning {
+  border: 1px solid #BB992F;
+  background-color: #BB992F;
+}
+.fc-danger {
+  border: 1px solid #B33C12;
+  background-color: #B33C12;
 }
 
 .fc-event, .fc-event:hover {

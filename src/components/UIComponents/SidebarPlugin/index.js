@@ -19,11 +19,6 @@ const SidebarStore = {
       path: '/admin/calendar'
     },
     {
-      name: 'Calendar Backup',
-      icon: 'fa fa-calendar',
-      path: '/admin/calendar_orgin'
-    },
-    {
       name: 'Dashboard',
       icon: 'ti-pie-chart',
       path: '/admin/dashboard'

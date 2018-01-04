@@ -1734,9 +1734,7 @@
       }, t.prototype.beforeFgSegHtml = function (t) {
       }, t.prototype.fgSegHtml = function (t, e) {
       }, t.prototype.getSegClasses = function (t, e, n) {
-        /* event color add : Na-Rae Jo */
-        var color = t.footprint.eventDef.color;
-        var i = ["fc-event", color ? "fc-" + color : "", t.isStart ? "fc-start" : "fc-not-start", t.isEnd ? "fc-end" : "fc-not-end"].concat(this.getClasses(t.footprint.eventDef));
+        var i = ["fc-event", t.isStart ? "fc-start" : "fc-not-start", t.isEnd ? "fc-end" : "fc-not-end"].concat(this.getClasses(t.footprint.eventDef));
         return e && i.push("fc-draggable"), n && i.push("fc-resizable"), this.view.isEventDefSelected(t.footprint.eventDef) && i.push("fc-selected"), i
       }, t.prototype.filterEventRenderEl = function (t, e) {
         var n = t.getEventLegacy(), r = this.view.publiclyTrigger("eventRender", {context: n, args: [n, e, this.view]});
