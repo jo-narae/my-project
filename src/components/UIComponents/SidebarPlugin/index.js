@@ -22,16 +22,6 @@ const SidebarStore = {
       name: 'Dashboard',
       icon: 'ti-pie-chart',
       path: '/admin/dashboard'
-    },
-    {
-      name: 'User Profile',
-      icon: 'fa fa-user',
-      path: '/admin/stats'
-    },
-    {
-      name: 'Icons',
-      icon: 'ti-pencil-alt2',
-      path: '/admin/icons'
     }
   ],
   displaySidebar (value) {
