@@ -9,8 +9,9 @@
               <span class="title-job-list"> Event Filter </span>
             </div>
             <div class="margin-job-list" v-for="work in jobListData">
-              <button type="submit" class="btn btn-sm ellipsis full-job-list"
-                      draggable="true">
+              <button type="submit" class="btn btn-sm btn-fill ellipsis full-job-list" draggable="true"
+                      :class="{ 'job-event-primary' : work.color == 'primary', 'job-event-success' : work.color == 'success', 'job-event-info' : work.color == 'info',
+                                'job-event-warning' : work.color == 'warning', 'job-event-danger' : work.color == 'danger' }">
                 {{work.text}}
               </button>
             </div>
@@ -32,10 +33,11 @@
     data () {
       return {
         jobListData: [
-          {text: 'Design'},
-          {text: 'Implement'},
-          {text: 'Verification'},
-          {text: 'Meeting'}
+          {text: 'Design', color: 'primary'},
+          {text: 'Implement', color: 'success'},
+          {text: 'Verification', color: 'info'},
+          {text: 'Report', color: 'warning'},
+          {text: 'Meeting', color: 'danger'}
         ],
         jobEvents: [
           {
@@ -141,7 +143,7 @@
 
 </script>
 <style scoped>
-.center-job-list {
+  .center-job-list {
     text-align: center !important;
   }
   .full-job-list {

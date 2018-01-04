@@ -57,6 +57,23 @@
   @include btn-styles($danger-color, $danger-states-color);
 }
 
+/** Color Add : Na-Rae Jo **/
+.job-event-primary {
+  @include btn-styles(#0288D1, #0277BD);
+}
+.job-event-success {
+  @include btn-styles(#388E3C, #2E7D32);
+}
+.job-event-info {
+  @include btn-styles(#00838F, #006064);
+}
+.job-event-warning {
+  @include btn-styles(#FFAB00, #FF8F00);
+}
+.job-event-danger {
+  @include btn-styles(#DD2C00, #BF360C);
+}
+
 .btn-neutral {
   @include btn-styles($white-color, $white-color);
 

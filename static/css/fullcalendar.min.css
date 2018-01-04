@@ -294,24 +294,24 @@ a[data-goto]:hover {
 
 /* event color add : Na-Rae Jo */
 .fc-primary {
-  border: 1px solid #427C89;
-  background-color: #427C89;
+  border: 1px solid #0288D1;
+  background-color: #0288D1;
 }
 .fc-success {
-  border: 1px solid #229863;
-  background-color: #229863;
+  border: 1px solid #388E3C;
+  background-color: #388E3C;
 }
 .fc-info {
-  border: 1px solid #3091B2;
-  background-color: #3091B2;
+  border: 1px solid #00838F;
+  background-color: #00838F;
 }
 .fc-warning {
-  border: 1px solid #BB992F;
-  background-color: #BB992F;
+  border: 1px solid #FFAB00;
+  background-color: #FFAB00;
 }
 .fc-danger {
-  border: 1px solid #B33C12;
-  background-color: #B33C12;
+  border: 1px solid #DD2C00;
+  background-color: #DD2C00;
 }
 
 .fc-event, .fc-event:hover {
