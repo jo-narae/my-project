@@ -170,6 +170,12 @@
 .width-feed-comment div.card {
   padding: 10px;
 }
+/** feed function add : Na-Rae Jo */
+.card-feed-function {
+  padding: 5px;
+  background-color: $brown-fill-bg;
+  border-top: 1px solid $brown-top-border;
+}
 .card-user {
   .image {
     border-radius: 8px 8px 0 0;

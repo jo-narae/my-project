@@ -2,6 +2,7 @@
   <div class="row">
     <div class="col-lg-12 col-md-12">
       <div class="card">
+        <a href="#" class="edit-menu"><i class="fa fa-bars"></i></a>
         <div class="content">
           <div class="description card-feed">
             <img class="avatar border-white card-feed-avatar" src="static/img/faces/face-2.jpg" alt="avatar">
@@ -9,7 +10,7 @@
               <ul>
                 <li class="card-feed-name">Chet Faker</li>
                 <li>
-                  <small>Development</small><small style="margin-left: 5px; margin-right: 5px;">|</small><small>3 minute ago</small>
+                  <small>Development</small><small class="minute-info">|</small><small>3 minute ago</small>
                 </li>
               </ul>
             </div>
@@ -20,6 +21,17 @@
           <div class="description">
             I like the way you work it No diggity I wanna bag it up
           </div>
+        </div>
+        <div class="card-feed-function">
+          <a href="#" class="icon-align">
+            <i class="fa fa-clock-o icon-size"></i> Extension
+          </a>
+          <a href="#" class="icon-align">
+            <i class="fa fa-calendar-check-o icon-size"></i> Status
+          </a>
+          <a href="#" class="icon-align">
+            <i class="fa fa-star icon-size"></i> Favorite
+          </a>
         </div>
         <div class="card-feed-comment">
           <div class="row width-feed-comment">
@@ -134,8 +146,45 @@
 
 </script>
 <style scoped>
+  .icon-align {
+    position: relative;
+    display: inline-block;
+    opacity: 100;
+    text-align: center;
+    margin-right: 5px;
+    padding: 5px;
+    border: 1px solid #EFEBE9;
+  }
+  .icon-align:hover {
+    border-radius: 6px;
+    border: 1px solid #EFEBE9;
+    background-color: #D7CCC8;
+    text-decoration:none;
+  }
+  .icon-size {
+    font-size: 9pt;
+  }
   .feed-content-title {
     margin-top: 20px;
     color: #000000 !important;
+  }
+  .minute-info {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .edit-menu {
+    position: absolute;
+    width: 100%;
+    text-align: right;
+    padding: 10px;
+  }
+  .edit-menu i {
+    padding: 5px 18px 5px 5px;
+    border: 1px solid #fff;
+  }
+  .edit-menu:hover i {
+    border-radius: 6px;
+    border: 1px solid #EFEBE9;
+    background-color: #D7CCC8;
   }
 </style>
