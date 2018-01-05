@@ -154,24 +154,6 @@
     }
   }
 }
-/** feed comment add : Na-Rae Jo */
-.card-feed-comment {
-  border-radius: $border-radius-large-bottom;
-  background-color: $brown-fill-bg;
-  border-top: 1px solid $brown-top-border;
-}
-.width-feed-comment div.card:first-child {
-  margin-top: 10px;
-}
-.width-feed-comment div.card {
-  padding: 10px;
-}
-/** feed function add : Na-Rae Jo */
-.card-feed-function {
-  padding: 5px;
-  background-color: $brown-fill-bg;
-  border-top: 1px solid $brown-top-border;
-}
 .card-user {
   .image {
     border-radius: 8px 8px 0 0;
@@ -262,22 +244,3 @@
   }
 }
 
-/** feed style add : Na-Rae Jo */
-.card-feed ul {
-  margin: 0 0 0 0;
-  list-style:none;
-}
-.card-feed .card-feed-avatar {
-  margin-left: 0px !important;
-  margin-right: 10px;
-  float: left;
-  position: absolute;
-}
-.card-feed-info ul {
-  margin-left: 20px;
-}
-.card-feed-name {
-  font-size: 20px;
-  color: $font-accent-color;
-  font-weight: bold;
-}

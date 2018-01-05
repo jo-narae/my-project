@@ -34,7 +34,7 @@
           </a>
         </div>
         <div class="card-feed-comment">
-          <div>
+          <div class="feed-comment-area">
             <img class="avatar border-white card-feed-avatar card-feed-comment-avatar"src="static/img/faces/face-3.jpg" alt="avatar">
             <div class="row width-feed-comment">
               <div class="card card-feed-comment-text">
@@ -48,7 +48,7 @@
               </div>
             </div>
           </div>
-          <div>
+          <div class="feed-comment-area">
             <img class="avatar border-white card-feed-avatar card-feed-comment-avatar"src="static/img/faces/face-3.jpg" alt="avatar">
             <div class="row width-feed-comment">
               <div class="card card-feed-comment-text">
@@ -62,7 +62,7 @@
               </div>
             </div>
           </div>
-          <div>
+          <div class="feed-comment-area">
             <img class="avatar border-white card-feed-avatar card-feed-comment-avatar"src="static/img/faces/face-3.jpg" alt="avatar">
             <div class="row width-feed-comment">
               <div class="card card-feed-comment-text">
@@ -175,77 +175,5 @@
   }
 
 </script>
-<style scoped>
-  .icon-align {
-    position: relative;
-    display: inline-block;
-    opacity: 100;
-    text-align: center;
-    margin-right: 5px;
-    padding: 5px;
-    border: 1px solid #EFEBE9;
-  }
-  .icon-align:hover {
-    border-radius: 6px;
-    border: 1px solid #EFEBE9;
-    background-color: #D7CCC8;
-    text-decoration:none;
-  }
-  .icon-size {
-    font-size: 9pt;
-  }
-  .feed-content-title {
-    margin-top: 20px;
-    font-weight: bold;
-    color: #3d3a36 !important;
-  }
-  .minute-info {
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-  .edit-menu {
-    position: absolute;
-    width: 100%;
-    text-align: right;
-    padding: 10px;
-  }
-  .edit-menu i {
-    padding: 5px;
-    border: 1px solid #fff;
-  }
-  .edit-menu:hover i {
-    border-radius: 6px;
-    border: 1px solid #EFEBE9;
-    background-color: #D7CCC8;
-  }
-  .card-feed-comment-avatar {
-    margin: 10px;
-    margin-top: 5px;
-    position: absolute;
-    border: 2px solid #EFEBE9;
-    z-index: 0;
-  }
-  .width-feed-comment {
-    margin-left: 50px;
-    max-width: 82%;
-  }
-  .card-feed-comment-text {
-    position: static;
-    padding-left: 20px !important;
-    margin-bottom: 5px !important;
-    z-index: 1;
-  }
-  .comment-author-name {
-    font-weight: bold;
-    color: #3d3a36;
-  }
-  .comment-content {
-    color: #66615b;
-  }
-  .feed-comment-function {
-    margin: 0 0 0px 10px;
-  }
-  .feed-comment-function-last {
-    margin: 0 0 15px 10px;
-  }
+<style>
 </style>

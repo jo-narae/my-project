@@ -1,0 +1,111 @@
+/** feed comment add : Na-Rae Jo */
+.card-feed-comment {
+  border-radius: $border-radius-large-bottom;
+  background-color: $brown-fill-bg;
+  border-top: 1px solid $brown-top-border;
+}
+.feed-comment-area:first-child {
+  margin-top: 10px;
+}
+.width-feed-comment div.card {
+  margin-top: 10px;
+  padding: 10px;
+}
+/** feed function add : Na-Rae Jo */
+.card-feed-function {
+  padding: 5px;
+  background-color: $brown-fill-bg;
+  border-top: 1px solid $brown-top-border;
+}
+/** feed style add : Na-Rae Jo */
+.card-feed ul {
+  margin: 0 0 0 0;
+  list-style:none;
+}
+.card-feed .card-feed-avatar {
+  margin-left: 0px !important;
+  margin-right: 10px;
+  float: left;
+  position: absolute;
+}
+.card-feed-info ul {
+  margin-left: 20px;
+}
+.card-feed-name {
+  font-size: 20px;
+  color: $font-accent-color;
+  font-weight: bold;
+}
+
+.icon-align {
+  position: relative;
+  display: inline-block;
+  opacity: 100;
+  text-align: center;
+  margin-right: 5px;
+  padding: 5px;
+  border: 1px solid $brown-fill-bg;
+}
+.icon-align:hover {
+  border-radius: $border-radius-large;
+  border: 1px solid $brown-fill-bg;
+  background-color: $brown-top-border;
+  text-decoration:none;
+}
+.icon-size {
+  font-size: 9pt;
+}
+.feed-content-title {
+  margin-top: 20px;
+  font-weight: bold;
+  color: $font-accent-color !important;
+}
+.minute-info {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.edit-menu {
+  position: absolute;
+  width: 100%;
+  text-align: right;
+  padding: 10px;
+}
+.edit-menu i {
+  padding: 5px;
+  border: 1px solid #fff;
+}
+.edit-menu:hover i {
+  border-radius: $border-radius-large;
+  border: 1px solid $brown-fill-bg;
+  background-color: $brown-top-border;
+}
+.card-feed-comment-avatar {
+  margin: 10px;
+  margin-top: 5px;
+  position: absolute;
+  border: 2px solid $brown-fill-bg;
+  z-index: 0;
+}
+.width-feed-comment {
+  margin-left: 50px;
+  max-width: 82%;
+}
+.card-feed-comment-text {
+  position: static;
+  padding-left: 20px !important;
+  margin-bottom: 5px !important;
+  z-index: 1;
+}
+.comment-author-name {
+  font-weight: bold;
+  color: $font-accent-color;
+}
+.comment-content {
+  color: $default-color;
+}
+.feed-comment-function {
+  margin: 0 0 0px 10px;
+}
+.feed-comment-function-last {
+  margin: 0 0 15px 10px;
+}
