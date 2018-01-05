@@ -4,13 +4,13 @@ const SidebarStore = {
   showSidebar: false,
   sidebarLinks: [
     {
-      name: 'Overview',
-      icon: 'ti-blackboard',
-      path: '/admin/overview'
+      name: 'Dashboard',
+      icon: 'fa fa-tachometer',
+      path: '/admin/dashboard'
     },
     {
       name: 'My Work',
-      icon: 'ti-files',
+      icon: 'fa fa-files-o',
       path: '/admin/mywork'
     },
     {
@@ -19,8 +19,8 @@ const SidebarStore = {
       path: '/admin/calendar'
     },
     {
-      name: 'Dashboard',
-      icon: 'ti-pie-chart',
+      name: 'Chart',
+      icon: 'fa fa-pie-chart',
       path: '/admin/dashboard'
     }
   ],
