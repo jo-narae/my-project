@@ -13,6 +13,10 @@
         <feed></feed>
       </v-tab>
 
+      <v-tab icon="fa fa-history" class="tab-content" title="Delay">
+        <feed></feed>
+      </v-tab>
+
       <v-tab icon="fa fa-ban" class="tab-content" title="Close">
         <feed></feed>
       </v-tab>
