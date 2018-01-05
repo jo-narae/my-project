@@ -36,7 +36,7 @@
         <div class="card-feed-comment">
           <div>
             <img class="avatar border-white card-feed-avatar card-feed-comment-avatar"src="static/img/faces/face-3.jpg" alt="avatar">
-            <div class="row width-feed-comment">
+            <div class="row width-comment">
               <div class="card card-feed-comment-text">
                 <span class="comment-author-name">Adam Smith</span>
                 <span class="comment-content">And trust me I'll give it a chance now</span>
@@ -50,10 +50,14 @@
           </div>
           <div>
             <img class="avatar border-white card-feed-avatar card-feed-comment-avatar"src="static/img/faces/face-3.jpg" alt="avatar">
-            <div class="row width-feed-comment">
-              <div class="card card-feed-comment-text feed-comment-input">
-                <textarea class="comment-input-text form-control" v-autosize="commentText" placeholder="Please enter your comment ...">{{commentText}}</textarea>
-                <!--<button class="btn btn-sm" style="margin-left: 90%">Input</button> class="comment-input-text form-control" -->
+            <div class="row width-comment">
+              <div class="comment-textarea">
+                <div class="card card-feed-comment-text feed-comment-input">
+                  <textarea class="comment-input-text form-control" v-autosize="commentText" placeholder="Please enter your comment ...">{{commentText}}</textarea>
+                </div>
+              </div>
+              <div class="comment-submit">
+                <button class="btn btn-sm btn-fill">Input</button>
               </div>
             </div>
           </div>
@@ -67,8 +71,12 @@
   export default {
     data () {
       return {
-        commentText: ''
+        commentText: '',
+        windowWidth: ''
       }
+    },
+    mounted () {
+      console.log(this)
     },
     methods: {
       resize (obj) {
@@ -80,5 +88,5 @@
   }
 
 </script>
-<style>
+<style scoped>
 </style>

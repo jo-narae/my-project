@@ -1,4 +1,3 @@
-/** feed comment add : Na-Rae Jo */
 .card-feed-comment {
   border-radius: $border-radius-large-bottom;
   background-color: $brown-fill-bg;
@@ -7,17 +6,15 @@
 .feed-comment-area:last-child {
   margin-bottom: 10px;
 }
-.width-feed-comment div.card {
+.width-comment div.card{
   margin-top: 10px;
   padding: 10px;
 }
-/** feed function add : Na-Rae Jo */
 .card-feed-function {
   padding: 5px;
   background-color: $brown-fill-bg;
   border-top: 1px solid $brown-top-border;
 }
-/** feed style add : Na-Rae Jo */
 .card-feed ul {
   margin: 0 0 0 0;
   list-style:none;
@@ -86,7 +83,7 @@
   border: 2px solid $brown-fill-bg;
   z-index: 0;
 }
-.width-feed-comment {
+.width-comment {
   margin-left: 50px;
   max-width: 82%;
 }
@@ -119,7 +116,6 @@
   font-size: 1em;
 }
 .comment-input-text {
-  width: 90%;
   height: 20px;
   display: inline-block;
   word-wrap: break-word;
@@ -128,4 +124,13 @@
 textarea.form-control {
   padding: 0px !important;
   height: 20px;
+}
+.comment-textarea {
+  float:left; min-width: 89%;
+}
+.comment-submit {
+  float:left; margin-left: 5px;
+}
+.comment-submit-top {
+  margin-top: 15px;
 }
