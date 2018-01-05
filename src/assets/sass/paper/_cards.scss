@@ -160,10 +160,6 @@
   background-color: $brown-fill-bg;
   border-top: 1px solid $brown-top-border;
 }
-.width-feed-comment {
-  margin-left: 1%;
-  max-width: 98%;
-}
 .width-feed-comment div.card:first-child {
   margin-top: 20px;
 }
@@ -282,5 +278,6 @@
 }
 .card-feed-name {
   font-size: 20px;
+  color: $font-accent-color;
   font-weight: bold;
 }

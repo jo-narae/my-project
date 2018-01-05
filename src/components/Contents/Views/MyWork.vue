@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-lg-12 col-md-12">
       <div class="card">
-        <a href="#" class="edit-menu"><i class="fa fa-bars"></i></a>
+        <a href="#" class="edit-menu"><i class="fa fa-ellipsis-v"></i></a>
         <div class="content">
           <div class="description card-feed">
             <img class="avatar border-white card-feed-avatar" src="static/img/faces/face-2.jpg" alt="avatar">
@@ -34,16 +34,11 @@
           </a>
         </div>
         <div class="card-feed-comment">
+          <img class="avatar border-white card-feed-avatar card-feed-comment-avatar"src="static/img/faces/face-3.jpg" alt="avatar">
           <div class="row width-feed-comment">
-            <div class="card">
-              코멘트가 없습니다.
-            </div>
-            <div class="card">
-              <div>타이틀</div>
-              111
-            </div>
-            <div class="card">
-              111
+            <div class="card card-feed-comment-text">
+              <span class="comment-author-name">Adam Smith</span>
+              <span class="comment-text">And trust me I'll give it a chance now</span>
             </div>
           </div>
         </div>
@@ -166,7 +161,8 @@
   }
   .feed-content-title {
     margin-top: 20px;
-    color: #000000 !important;
+    font-weight: bold;
+    color: #3d3a36 !important;
   }
   .minute-info {
     margin-left: 5px;
@@ -179,12 +175,40 @@
     padding: 10px;
   }
   .edit-menu i {
-    padding: 5px 18px 5px 5px;
+    padding: 5px;
     border: 1px solid #fff;
   }
   .edit-menu:hover i {
     border-radius: 6px;
     border: 1px solid #EFEBE9;
     background-color: #D7CCC8;
+  }
+  .card-feed-comment-avatar {
+    margin: 10px;
+    position: absolute;
+    z-index: 0;
+  }
+  .card-feed-comment-avatar {
+    margin: 10px;
+    margin-top: 15px;
+    position: absolute;
+    border: 2px solid #EFEBE9;
+    z-index: 0;
+  }
+  .width-feed-comment {
+    margin-left: 50px;
+    max-width: 82%;
+  }
+  .card-feed-comment-text {
+    position: static;
+    padding-left: 20px !important;
+    z-index: 1;
+  }
+  .comment-author-name {
+    font-weight: bold;
+    color: #3d3a36;
+  }
+  .comment-text {
+    color: #66615b;
   }
 </style>
