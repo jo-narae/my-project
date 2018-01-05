@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import vClickOutside from 'v-click-outside'
 import BootstrapVue from 'bootstrap-vue'
+import VueTabs from 'vue-nav-tabs'
 
 // Plugins
 import GlobalComponents from './gloablComponents'
@@ -26,6 +27,7 @@ Vue.use(vClickOutside)
 Vue.use(Notifications)
 Vue.use(SideBar)
 Vue.use(BootstrapVue)
+Vue.use(VueTabs)
 Vue.use(VueAutosize)
 
 // configure router
