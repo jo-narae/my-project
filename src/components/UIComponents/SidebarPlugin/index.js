@@ -20,7 +20,7 @@ const SidebarStore = {
     },
     {
       name: 'Chart',
-      icon: 'fa fa-pie-chart',
+      icon: 'fa fa-bar-chart',
       path: '/chart'
     }
   ],
