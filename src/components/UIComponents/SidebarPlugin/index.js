@@ -6,22 +6,22 @@ const SidebarStore = {
     {
       name: 'Dashboard',
       icon: 'fa fa-tachometer',
-      path: '/admin/dashboard'
+      path: '/dashboard'
     },
     {
       name: 'My Work',
       icon: 'fa fa-files-o',
-      path: '/admin/mywork'
+      path: '/mywork'
     },
     {
       name: 'Calendar',
       icon: 'fa fa-calendar',
-      path: '/admin/calendar'
+      path: '/calendar'
     },
     {
       name: 'Chart',
       icon: 'fa fa-pie-chart',
-      path: '/admin/dashboard'
+      path: '/chart'
     }
   ],
   displaySidebar (value) {

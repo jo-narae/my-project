@@ -3,10 +3,10 @@ import ContentsLayout from '../components/Contents/Layout/ContentLayout.vue'
 import NotFound from '../components/GeneralViews/NotFoundPage.vue'
 
 // Admin pages
-import Overview from 'src/components/Contents/Views/Overview.vue'
+import Dashboard from 'src/components/Contents/Views/Dashboard.vue'
 import MyWork from 'src/components/Contents/Views/MyWork.vue'
 import Calendar from 'src/components/Contents/Views/Calendar.vue'
-import Dashboard from 'src/components/Contents/Views/Dashboard.vue'
+import Chart from 'src/components/Contents/Views/Chart.vue'
 import UserProfile from 'src/components/Contents/Views/UserProfile.vue'
 import Notifications from 'src/components/Contents/Views/Notifications.vue'
 import Icons from 'src/components/Contents/Views/Icons.vue'
@@ -18,17 +18,17 @@ const routes = [
   {
     path: '/',
     component: ContentsLayout,
-    redirect: '/admin/overview'
+    redirect: '/dashboard'
   },
   {
-    path: '/admin',
+    path: '/',
     component: ContentsLayout,
-    redirect: '/admin/stats',
+    redirect: '/stats',
     children: [
       {
-        path: 'overview',
-        name: 'Overview',
-        component: Overview
+        path: 'dashboard',
+        name: 'Dashboard',
+        component: Dashboard
       },
       {
         path: 'mywork',
@@ -41,9 +41,9 @@ const routes = [
         component: Calendar
       },
       {
-        path: 'dashboard',
-        name: 'Dashboard',
-        component: Dashboard
+        path: 'chart',
+        name: 'Chart',
+        component: Chart
       },
       {
         path: 'stats',
