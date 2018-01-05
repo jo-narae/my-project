@@ -17,6 +17,8 @@ import Chartist from 'chartist'
 import 'bootstrap/dist/css/bootstrap.css'
 import './assets/sass/paper-dashboard.scss'
 
+var VueAutosize = require('vue-autosize')
+
 // plugin setup
 Vue.use(VueRouter)
 Vue.use(GlobalComponents)
@@ -24,6 +26,7 @@ Vue.use(vClickOutside)
 Vue.use(Notifications)
 Vue.use(SideBar)
 Vue.use(BootstrapVue)
+Vue.use(VueAutosize)
 
 // configure router
 const router = new VueRouter({

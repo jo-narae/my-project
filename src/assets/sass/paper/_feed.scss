@@ -4,8 +4,8 @@
   background-color: $brown-fill-bg;
   border-top: 1px solid $brown-top-border;
 }
-.feed-comment-area:first-child {
-  margin-top: 10px;
+.feed-comment-area:last-child {
+  margin-bottom: 10px;
 }
 .width-feed-comment div.card {
   margin-top: 10px;
@@ -106,6 +106,26 @@
 .feed-comment-function {
   margin: 0 0 0px 10px;
 }
-.feed-comment-function-last {
-  margin: 0 0 15px 10px;
+.feed-comment-input {
+  margin-bottom: 10px !important;
+}
+/** input text */
+.form-control {
+  @include light-form();
+  height: 22px;
+  font-size: $font-size-navbar;
+  line-height: $line-height-general;
+  color: $default-color;
+  font-size: 1em;
+}
+.comment-input-text {
+  width: 90%;
+  height: 20px;
+  display: inline-block;
+  word-wrap: break-word;
+  word-break: keep-all;
+}
+textarea.form-control {
+  padding: 0px !important;
+  height: 20px;
 }
