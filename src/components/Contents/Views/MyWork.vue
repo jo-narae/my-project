@@ -34,11 +34,46 @@
           </a>
         </div>
         <div class="card-feed-comment">
-          <img class="avatar border-white card-feed-avatar card-feed-comment-avatar"src="static/img/faces/face-3.jpg" alt="avatar">
-          <div class="row width-feed-comment">
-            <div class="card card-feed-comment-text">
-              <span class="comment-author-name">Adam Smith</span>
-              <span class="comment-text">And trust me I'll give it a chance now</span>
+          <div>
+            <img class="avatar border-white card-feed-avatar card-feed-comment-avatar"src="static/img/faces/face-3.jpg" alt="avatar">
+            <div class="row width-feed-comment">
+              <div class="card card-feed-comment-text">
+                <span class="comment-author-name">Adam Smith</span>
+                <span class="comment-content">And trust me I'll give it a chance now</span>
+              </div>
+              <div class="feed-comment-function">
+                <span class="comment-content"><a href="#">reply</a></span>
+                <span class="minute-info">·</span>
+                <span class="comment-content">3 second ago</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img class="avatar border-white card-feed-avatar card-feed-comment-avatar"src="static/img/faces/face-3.jpg" alt="avatar">
+            <div class="row width-feed-comment">
+              <div class="card card-feed-comment-text">
+                <span class="comment-author-name">Adam Smith</span>
+                <span class="comment-content">And trust me I'll give it a chance now</span>
+              </div>
+              <div class="feed-comment-function">
+                <span class="comment-content"><a href="#">reply</a></span>
+                <span class="minute-info">·</span>
+                <span class="comment-content">3 second ago</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img class="avatar border-white card-feed-avatar card-feed-comment-avatar"src="static/img/faces/face-3.jpg" alt="avatar">
+            <div class="row width-feed-comment">
+              <div class="card card-feed-comment-text">
+                <span class="comment-author-name">Adam Smith</span>
+                <span class="comment-content">And trust me I'll give it a chance now</span>
+              </div>
+              <div class="feed-comment-function-last">
+                <span class="comment-content"><a href="#">reply</a></span>
+                <span class="minute-info">·</span>
+                <span class="comment-content">3 second ago</span>
+              </div>
             </div>
           </div>
         </div>
@@ -185,12 +220,7 @@
   }
   .card-feed-comment-avatar {
     margin: 10px;
-    position: absolute;
-    z-index: 0;
-  }
-  .card-feed-comment-avatar {
-    margin: 10px;
-    margin-top: 15px;
+    margin-top: 5px;
     position: absolute;
     border: 2px solid #EFEBE9;
     z-index: 0;
@@ -202,13 +232,20 @@
   .card-feed-comment-text {
     position: static;
     padding-left: 20px !important;
+    margin-bottom: 5px !important;
     z-index: 1;
   }
   .comment-author-name {
     font-weight: bold;
     color: #3d3a36;
   }
-  .comment-text {
+  .comment-content {
     color: #66615b;
+  }
+  .feed-comment-function {
+    margin: 0 0 0px 10px;
+  }
+  .feed-comment-function-last {
+    margin: 0 0 15px 10px;
   }
 </style>
