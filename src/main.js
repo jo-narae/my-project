@@ -14,7 +14,6 @@ import App from './App'
 import routes from './routes/routes'
 
 // library imports
-import Chartist from 'chartist'
 import 'bootstrap/dist/css/bootstrap.css'
 import './assets/sass/paper-dashboard.scss'
 
@@ -30,17 +29,16 @@ Vue.use(BootstrapVue)
 Vue.use(VueTabs)
 Vue.use(VueAutosize)
 
+// chartjs package
+require('chart.js')
+// vue-charts package
+require('hchs-vue-charts')
+Vue.use(VueCharts)
+
 // configure router
 const router = new VueRouter({
   routes, // short for routes: routes
   linkActiveClass: 'active'
-})
-
-// global library setup
-Object.defineProperty(Vue.prototype, '$Chartist', {
-  get () {
-    return this.$root.Chartist
-  }
 })
 
 /* eslint-disable no-new */
@@ -49,6 +47,5 @@ new Vue({
   render: h => h(App),
   router,
   data: {
-    Chartist: Chartist
   }
 })

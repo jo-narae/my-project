@@ -9,7 +9,7 @@
             <i :class="stats.icon"></i>
           </div>
           <div class="numbers" slot="content">
-            <p>{{stats.title}}</p>
+            <p class="stats-title">{{stats.title}}</p>
             <span>{{stats.value}}</span>
             <span class="dashboard-sign">{{stats.sign}}</span>
           </div>
@@ -22,24 +22,16 @@
 
     <!--Charts-->
     <div class="row">
+      <div class="col-md-12 col-xs-12">
+        <div class="card">
+          <chart-card></chart-card>
+        </div>
+      </div>
       <div class="col-md-6 col-xs-12">
-        <chart-card :chart-data="preferencesChart.data"  chart-type="Pie">
-          <h4 class="title" slot="title">Email Statistics</h4>
-          <span slot="subTitle"> Last campaign performance</span>
-          <span slot="footer">
-            <i class="ti-timer"></i> Campaign set 2 days ago</span>
-          <div slot="legend">
-            <i class="fa fa-circle text-info"></i> Design
-            <i class="fa fa-circle text-danger"></i> Implement
-            <i class="fa fa-circle text-warning"></i> Verification
-            <i class="fa fa-circle text-warning"></i> Report
-            <i class="fa fa-circle text-warning"></i> Meeting
-          </div>
-        </chart-card>
       </div>
 
       <div class="col-md-6 col-xs-12">
-        <chart-card :chart-data="activityChart.data" :chart-options="activityChart.options">
+<!--        <chart-card :chart-data="activityChart.data" :chart-options="activityChart.options">
           <h4 class="title" slot="title">2015 Sales</h4>
           <span slot="subTitle"> All products including Taxes</span>
           <span slot="footer">
@@ -48,7 +40,7 @@
             <i class="fa fa-circle text-info"></i> Tesla Model S
             <i class="fa fa-circle text-warning"></i> BMW 5 Series
           </div>
-        </chart-card>
+        </chart-card>-->
       </div>
     </div>
 
@@ -71,60 +63,29 @@
           {
             type: 'info',
             icon: 'fa fa-inbox',
-            title: 'Total Event',
-            value: '23',
-            footerText: 'Updated now',
-            footerIcon: 'fa fa-refresh'
+            title: 'Total Event Count',
+            value: '23'
           },
           {
             type: 'success',
             icon: 'fa fa-pie-chart',
             title: 'Progress Date',
             value: '23',
-            sign: '%',
-            footerText: 'Updated now',
-            footerIcon: 'fa fa-refresh'
+            sign: '%'
           },
           {
             type: 'danger',
             icon: 'fa fa-history',
-            title: 'Total Delay',
-            value: '30',
-            footerText: 'Updated now',
-            footerIcon: 'fa fa-refresh'
+            title: 'Total Delay Count',
+            value: '30'
           },
           {
-            type: 'warning',
+            type: 'primary',
             icon: 'fa fa-users',
             title: 'Project Members',
-            value: '5',
-            footerText: 'View members',
-            footerIcon: 'fa fa-search'
+            value: '5'
           }
-        ],
-        preferencesChart: {
-          data: {
-            labels: ['30%', '30%', '20%', '10%', '10%'],
-            series: [30, 30, 20, 10, 10]
-          },
-          options: {}
-        },
-        activityChart: {
-          data: {
-            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-            series: [
-              [542, 543, 520, 680, 653, 753, 326, 434, 568, 610, 756, 895],
-              [230, 293, 380, 480, 503, 553, 600, 664, 698, 710, 736, 795]
-            ]
-          },
-          options: {
-            seriesBarDistance: 10,
-            axisX: {
-              showGrid: false
-            },
-            height: '245px'
-          }
-        }
+        ]
       }
     }
   }
@@ -133,5 +94,12 @@
 <style scoped>
   .dashboard-sign {
     font-size: 0.7em;
+  }
+  .stats-title {
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    word-wrap:normal;
+    overflow:hidden;
+    max-width: 100%;
   }
 </style>

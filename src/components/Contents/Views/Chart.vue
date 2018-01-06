@@ -23,11 +23,9 @@
 </template>
 <script>
   import StatsCard from 'components/UIComponents/Cards/StatsCard.vue'
-  import ChartCard from 'components/UIComponents/Cards/ChartCard.vue'
   export default {
     components: {
-      StatsCard,
-      ChartCard
+      StatsCard
     },
     /**
      * Chart data used to render stats, charts. Should be replaced with server data

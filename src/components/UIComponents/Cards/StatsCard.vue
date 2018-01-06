@@ -9,12 +9,8 @@
           <slot name="content"></slot>
         </div>
       </div>
-      <div class="footer">
-        <hr/>
-        <slot name="footer"></slot>
-      </div>
     </div>
-  
+
   </div>
 </template>
 <script>
@@ -24,5 +20,5 @@
 
 </script>
 <style>
-  
+
 </style>
