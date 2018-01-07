@@ -6,7 +6,7 @@
           <div class="content-job-list">
             <a class="badge btn-job-add">Add</a>
             <div class="center-job-list">
-              <span class="title-job-list"> Event Filter </span>
+              <span class="title-job-list"> Issue Filter </span>
             </div>
             <div class="margin-job-list">
               <button type="submit" class="btn btn-sm btn-fill ellipsis full-job-list">
@@ -15,8 +15,8 @@
             </div>
             <div class="margin-job-list" v-for="work in jobListData">
               <button type="submit" class="btn btn-sm btn-fill ellipsis full-job-list"
-                      :class="{ 'job-event-primary' : work.color == 'primary', 'job-event-success' : work.color == 'success', 'job-event-info' : work.color == 'info',
-                                'job-event-warning' : work.color == 'warning', 'job-event-danger' : work.color == 'danger' }">
+                      :class="{ 'job-issue-primary' : work.color == 'primary', 'job-issue-success' : work.color == 'success', 'job-issue-info' : work.color == 'info',
+                                'job-issue-warning' : work.color == 'warning', 'job-issue-danger' : work.color == 'danger' }">
                 {{work.text}}
               </button>
             </div>

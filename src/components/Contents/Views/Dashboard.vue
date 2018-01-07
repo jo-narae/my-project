@@ -63,8 +63,8 @@
           {
             type: 'info',
             icon: 'fa fa-inbox',
-            title: 'Total Event Count',
-            value: '23'
+            title: 'Total Issue Count',
+            value: '300'
           },
           {
             type: 'success',
