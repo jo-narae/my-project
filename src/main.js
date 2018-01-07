@@ -29,12 +29,6 @@ Vue.use(BootstrapVue)
 Vue.use(VueTabs)
 Vue.use(VueAutosize)
 
-// chartjs package
-require('chart.js')
-// vue-charts package
-require('hchs-vue-charts')
-Vue.use(VueCharts)
-
 // configure router
 const router = new VueRouter({
   routes, // short for routes: routes
