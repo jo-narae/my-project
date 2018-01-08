@@ -24,12 +24,31 @@
     <div class="row">
       <div class="col-md-6 col-xs-12">
         <div class="card">
-          <chart-card :dataSet="jobKind" :defaultOption="JobKindOption" :chartTitle="jobKindTitle" :chartType="chartType[2]" />
+          최근 피드
         </div>
       </div>
-      <div class="col-md-6 col-xs-12">
+      <div class="col-md-3 col-xs-12">
         <div class="card">
-          <chart-card :dataSet="totalIssue" :defaultOption="totalIssueOption" :chartTitle="totalIssueTitle" :chartType="chartType[2]" />
+          <chart-card :dataSet="jobKind" :defaultOption="JobKindOption" :chartTitle="jobKindTitle" :chartType="chartType[3]" />
+        </div>
+      </div>
+      <div class="col-md-3 col-xs-12">
+        <div class="card">
+          <chart-card :dataSet="totalIssue" :defaultOption="totalIssueOption" :chartTitle="totalIssueTitle" :chartType="chartType[3]" />
+        </div>
+      </div>
+    </div>
+
+    <!-- ETC -->
+    <div class="row">
+      <div class="col-md-9 col-xs-12">
+        <div class="card">
+          <chart-card :dataSet="jobComplete" :defaultOption="jobCompleteOption" :chartTitle="jobCompleteTitle" :chartType="chartType[1]" />
+        </div>
+      </div>
+      <div class="col-md-3 col-xs-12">
+        <div class="card">
+          멤버 영역
         </div>
       </div>
     </div>
@@ -49,6 +68,7 @@
      */
     data () {
       return {
+        chartType: ['BAR', 'HORIZONTAL', 'LINE', 'PIE'],
         statsCards: [
           {
             type: 'info',
@@ -73,10 +93,9 @@
             type: 'primary',
             icon: 'fa fa-users',
             title: 'Project Members',
-            value: '5'
+            value: '50'
           }
         ],
-        chartType: ['BAR', 'LINE', 'PIE'],
         jobKindTitle: 'Issue Kind Ratio',
         jobKind: {
           datasets: [{
@@ -102,6 +121,55 @@
         },
         totalIssueOption: {
           maintainAspectRatio: false
+        },
+        jobCompleteTitle: 'Activity Rate of Department',
+        jobComplete: {
+          labels: ['first week', 'second week', 'third week', 'fourth week'],
+          datasets: [
+            {
+              data: [60, 40, 0, 0],
+              backgroundColor: '#0288D1',
+              hoverBackgroundColor: '#0288D1',
+              label: 'Plan'
+            },
+            {
+              data: [25, 30, 0, 0],
+              backgroundColor: '#FFAB00',
+              hoverBackgroundColor: '#FFAB00',
+              label: 'Design'
+            },
+            {
+              data: [15, 30, 0, 0],
+              backgroundColor: '#BF360C',
+              hoverBackgroundColor: '#BF360C',
+              label: 'Development'
+            }
+          ]
+        },
+        jobCompleteOption: {
+          maintainAspectRatio: false,
+          scales: {
+            xAxes: [{
+              stacked: true,
+              ticks: {
+                min: 0,
+                max: 100,
+                stepSize: 10
+              }
+            }],
+            yAxes: [{
+              barThickness: 25,
+              barPercentage: 1.0,
+              categoryPercentage: 1.0,
+              gridLines: {
+                display: false,
+                color: '#fff',
+                zeroLineColor: '#fff',
+                zeroLineWidth: 0
+              },
+              stacked: true
+            }]
+          }
         }
       }
     }
