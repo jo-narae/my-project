@@ -22,25 +22,11 @@
 
     <!--Charts-->
     <div class="row">
-      <div class="col-md-12 col-xs-12">
-        <div class="card">
-          <chart-card></chart-card>
-        </div>
-      </div>
+
       <div class="col-md-6 col-xs-12">
       </div>
 
       <div class="col-md-6 col-xs-12">
-<!--        <chart-card :chart-data="activityChart.data" :chart-options="activityChart.options">
-          <h4 class="title" slot="title">2015 Sales</h4>
-          <span slot="subTitle"> All products including Taxes</span>
-          <span slot="footer">
-            <i class="ti-check"></i> Data information certified</span>
-          <div slot="legend">
-            <i class="fa fa-circle text-info"></i> Tesla Model S
-            <i class="fa fa-circle text-warning"></i> BMW 5 Series
-          </div>
-        </chart-card>-->
       </div>
     </div>
 
