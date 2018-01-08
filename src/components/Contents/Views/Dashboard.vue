@@ -9,7 +9,7 @@
             <i :class="stats.icon"></i>
           </div>
           <div class="numbers" slot="content">
-            <p class="stats-title">{{stats.title}}</p>
+            <p class="ellipsis">{{stats.title}}</p>
             <span>{{stats.value}}</span>
             <span class="dashboard-sign">{{stats.sign}}</span>
           </div>
@@ -48,7 +48,14 @@
       </div>
       <div class="col-md-3 col-xs-12">
         <div class="card">
-          멤버 영역
+          <div  style="padding-top: 10px; padding-left: 7%;">
+          <div v-for="info in memberInfo" style="display: inline-block;">
+            <div>
+              <img class="avatar dashboard-avatar" :src="info.image" alt="avatar">
+              <p class="ellipsis avatar-name">{{info.name}}</p>
+            </div>
+          </div>
+          </div>
         </div>
       </div>
     </div>
@@ -170,7 +177,33 @@
               stacked: true
             }]
           }
-        }
+        },
+        memberInfo: [
+          { image: 'static/img/faces/face-4.jpg',
+            name: 'Alexander Pierce'
+          },
+          { image: 'static/img/faces/face-5.jpg',
+            name: 'Norman'
+          },
+          { image: 'static/img/faces/face-6.jpg',
+            name: 'Jane'
+          },
+          { image: 'static/img/faces/face-7.jpg',
+            name: 'John'
+          },
+          { image: 'static/img/faces/face-8.jpg',
+            name: 'Alexander'
+          },
+          { image: 'static/img/faces/face-9.jpg',
+            name: 'Sarah'
+          },
+          { image: 'static/img/faces/face-10.jpg',
+            name: 'Nora'
+          },
+          { image: 'static/img/faces/face-11.jpg',
+            name: 'Nadia'
+          }
+        ]
       }
     }
   }
@@ -180,11 +213,23 @@
   .dashboard-sign {
     font-size: 0.7em;
   }
-  .stats-title {
+  .ellipsis {
     text-overflow:ellipsis;
     white-space:nowrap;
     word-wrap:normal;
     overflow:hidden;
-    max-width: 100%;
+    max-width: 80px;
+  }
+  .avatar-name {
+    margin-left: 5px;
+    text-align: center !important;
+  }
+  .member-info {
+    margin: 0 5px 0 5px;
+  }
+  .dashboard-avatar {
+    width: 60px !important;
+    height: 60px !important;
+    margin-left: 10px;
   }
 </style>
