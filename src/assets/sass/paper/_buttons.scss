@@ -58,19 +58,19 @@
 }
 
 /** Color Add : Na-Rae Jo **/
-.job-event-primary {
+.job-issue-primary {
   @include btn-styles(#0288D1, #0277BD);
 }
-.job-event-success {
+.job-issue-success {
   @include btn-styles(#388E3C, #2E7D32);
 }
-.job-event-info {
+.job-issue-info {
   @include btn-styles(#00838F, #006064);
 }
-.job-event-warning {
+.job-issue-warning {
   @include btn-styles(#FFAB00, #FF8F00);
 }
-.job-event-danger {
+.job-issue-danger {
   @include btn-styles(#DD2C00, #BF360C);
 }
 

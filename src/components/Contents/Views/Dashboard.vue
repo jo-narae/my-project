@@ -22,11 +22,15 @@
 
     <!--Charts-->
     <div class="row">
-
       <div class="col-md-6 col-xs-12">
+        <div class="card">
+          <chart-card :dataSet="jobKind" :defaultOption="JobKindOption" :chartTitle="jobKindTitle" :chartType="chartType[2]" />
+        </div>
       </div>
-
       <div class="col-md-6 col-xs-12">
+        <div class="card">
+          <chart-card :dataSet="totalIssue" :defaultOption="totalIssueOption" :chartTitle="totalIssueTitle" :chartType="chartType[2]" />
+        </div>
       </div>
     </div>
 
@@ -71,7 +75,34 @@
             title: 'Project Members',
             value: '5'
           }
-        ]
+        ],
+        chartType: ['BAR', 'LINE', 'PIE'],
+        jobKindTitle: 'Issue Kind Ratio',
+        jobKind: {
+          datasets: [{
+            data: [60, 60, 30, 30, 20],
+            backgroundColor: ['#0288D1', '#388E3C', '#00838F', '#FFAB00', '#BF360C'],
+            hoverBackgroundColor: ['#0288D1', '#388E3C', '#00838F', '#FFAB00', '#BF360C']
+          }],
+          // These labels appear in the legend and in the tooltips when hovering different arcs
+          labels: ['Design', 'Implement', 'Verification', 'Report', 'Meeting']
+        },
+        JobKindOption: {
+          maintainAspectRatio: false
+        },
+        totalIssueTitle: 'Total Issue Count',
+        totalIssue: {
+          datasets: [{
+            data: [70, 40, 70, 14, 200],
+            backgroundColor: ['#0288D1', '#388E3C', '#00838F', '#FFAB00', '#BF360C'],
+            hoverBackgroundColor: ['#0288D1', '#388E3C', '#00838F', '#FFAB00', '#BF360C']
+          }],
+          // These labels appear in the legend and in the tooltips when hovering different arcs
+          labels: ['Stay', 'Working', 'Complete', 'Reject', 'Close']
+        },
+        totalIssueOption: {
+          maintainAspectRatio: false
+        }
       }
     }
   }

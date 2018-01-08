@@ -1,11 +1,11 @@
 <template>
   <div>
 
-    <!--Stats cards-->
+    <!--Charts-->
     <div class="row">
       <div class="col-md-12 col-xs-12">
         <div class="card">
-          <chart-card :dataSet="IssueCount" :defaultOption="IssueCountOption" :chartType="chartType[0]" />
+          <chart-card :dataSet="issueCount" :defaultOption="issueCountOption" :chartType="chartType[0]" :chartTitle="issueCountTitle" />
         </div>
       </div>
     </div>
@@ -25,8 +25,9 @@
      */
     data () {
       return {
-        chartType: ['BAR', 'LINE'],
-        IssueCount: {
+        chartType: ['BAR', 'LINE', 'PIE'],
+        issueCountTitle: 'Total Issue Count of This Week',
+        issueCount: {
           labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
           datasets: [
             {
@@ -66,7 +67,7 @@
             }
           ]
         },
-        IssueCountOption: {
+        issueCountOption: {
           maintainAspectRatio: false,
           padding: {
             left: 10,
