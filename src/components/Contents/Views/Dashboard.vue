@@ -48,13 +48,20 @@
       </div>
       <div class="col-md-3 col-xs-12">
         <div class="card">
-          <div  style="padding-top: 10px; padding-left: 7%;">
-          <div v-for="info in memberInfo" style="display: inline-block;">
-            <div>
-              <img class="avatar dashboard-avatar" :src="info.image" alt="avatar">
-              <p class="ellipsis avatar-name">{{info.name}}</p>
+          <div class="member-list">
+            <p class="title chart-title" slot="title" >Members</p>
+            <div ref="memberInfoArea">
+              <div v-for="info in memberInfo" class="member-info">
+                <div class="member-info-data">
+                  <img class="avatar dashboard-avatar" :src="info.image" alt="avatar">
+                  <p class="ellipsis avatar-name">{{info.name}}</p>
+                </div>
+              </div>
             </div>
           </div>
+          <hr>
+          <div class="text-center">
+            <button class="btn btn-member-info"><i class="fa fa-address-book-o"></i> more member info </button>
           </div>
         </div>
       </div>
@@ -70,11 +77,13 @@
       StatsCard,
       ChartCard
     },
-    /**
-     * Chart data used to render stats, charts. Should be replaced with server data
-     */
+    mounted () {
+      // this.memberInfoHeight = this.$refs.memberInfoArea.clientHeight
+      // console.log(this.$refs.resize)
+    },
     data () {
       return {
+        memberInfoHeight: this.$refs.memberInfoArea,
         chartType: ['BAR', 'HORIZONTAL', 'LINE', 'PIE'],
         statsCards: [
           {
@@ -196,12 +205,6 @@
           },
           { image: 'static/img/faces/face-9.jpg',
             name: 'Sarah'
-          },
-          { image: 'static/img/faces/face-10.jpg',
-            name: 'Nora'
-          },
-          { image: 'static/img/faces/face-11.jpg',
-            name: 'Nadia'
           }
         ]
       }
@@ -210,26 +213,4 @@
 
 </script>
 <style scoped>
-  .dashboard-sign {
-    font-size: 0.7em;
-  }
-  .ellipsis {
-    text-overflow:ellipsis;
-    white-space:nowrap;
-    word-wrap:normal;
-    overflow:hidden;
-    max-width: 80px;
-  }
-  .avatar-name {
-    margin-left: 5px;
-    text-align: center !important;
-  }
-  .member-info {
-    margin: 0 5px 0 5px;
-  }
-  .dashboard-avatar {
-    width: 60px !important;
-    height: 60px !important;
-    margin-left: 10px;
-  }
 </style>

@@ -1,0 +1,38 @@
+.dashboard-sign {
+  font-size: 0.7em;
+}
+.ellipsis {
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  word-wrap:normal;
+  overflow:hidden;
+  max-width: 80px;
+}
+.avatar-name {
+  margin-left: 5px;
+  text-align: center !important;
+}
+.dashboard-avatar {
+  width: 60px !important;
+  height: 60px !important;
+  margin-left: 10px;
+}
+.member-list {
+  height: 100%;
+  padding-top: 10px;
+  padding-left: 10%;
+}
+.member-info {
+  display: inline-block;
+}
+.member-info-data {
+  width: 100%;
+  margin: 10px;
+}
+hr {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.btn-member-info {
+  margin-bottom: 20px;
+}
