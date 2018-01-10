@@ -9,7 +9,7 @@
             <i :class="stats.icon"></i>
           </div>
           <div class="numbers" slot="content">
-            <p class="ellipsis">{{stats.title}}</p>
+            <p>{{stats.title}}</p>
             <span>{{stats.value}}</span>
             <span class="dashboard-sign">{{stats.sign}}</span>
           </div>
@@ -42,15 +42,28 @@
     <!-- ETC -->
     <div class="row">
       <div class="col-md-6 col-xs-12">
-        <div class="card">
+        <div class="card department-card">
+          <p class="title chart-title department-title">Department Progress</p>
+          <div style="padding-bottom: 10px;">
+            <div v-for="item in department" >
+              <span class="ellipsis department-name">{{item.name}}</span>
+              <b-progress class="department-progress" :max="item.max">
+                <b-progress-bar :value="item.value"
+                            :variant="item.variant"
+                            :key="item.variant"
+                            :striped="striped"
+                >{{item.value}} / {{item.max}}</b-progress-bar>
+              </b-progress>
+            </div>
+          </div>
         </div>
       </div>
       <div class="col-md-6 col-xs-12">
-        <div class="card">
+        <div class="card member-card">
+          <p class="title chart-title member-title">Members</p>
           <div class="member-list">
-            <p class="title chart-title" slot="title" >Members</p>
-            <div v-for="info in memberInfo" class="member-info">
-              <div class="member-info-data">
+            <div v-for="(info, idx) in memberInfo" class="member-info">
+              <div v-if="idx < 5" class="member-info-data">
                 <img class="avatar dashboard-avatar" :src="info.image" alt="avatar">
                 <p class="ellipsis avatar-name">{{info.name}}</p>
               </div>
@@ -145,10 +158,14 @@
           },
           { image: 'static/img/faces/face-8.jpg',
             name: 'Alexander'
-          },
-          { image: 'static/img/faces/face-9.jpg',
-            name: 'Sarah'
           }
+        ],
+        striped: true,
+        department: [
+          {name: 'Plan', variant: 'success', max: 600, value: 523},
+          {name: 'Design', variant: 'info', max: 600, value: 450},
+          {name: 'Development', variant: 'warning', max: 600, value: 532},
+          {name: 'Q & A', variant: 'danger', max: 600, value: 480}
         ]
       }
     }
