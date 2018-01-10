@@ -5,7 +5,14 @@
     <div class="row">
       <div class="col-md-12 col-xs-12">
         <div class="card">
-          <chart-card :dataSet="issueCount" :defaultOption="issueCountOption" :chartType="chartType[0]" :chartTitle="issueCountTitle" />
+          <chart-card :dataSet="issueCount" :defaultOption="issueCountOption" :chartType="chartType[0]"
+                      :chartTitle="issueCountTitle"/>
+        </div>
+      </div>
+      <div class="col-md-12 col-xs-12">
+        <div class="card">
+          <chart-card :dataSet="jobComplete" :defaultOption="jobCompleteOption" :chartTitle="jobCompleteTitle"
+                      :chartType="chartType[1]"/>
         </div>
       </div>
     </div>
@@ -15,6 +22,7 @@
 <script>
   import StatsCard from 'components/UIComponents/Cards/StatsCard.vue'
   import ChartCard from 'components/UIComponents/Cards/ChartCard.vue'
+
   export default {
     components: {
       StatsCard,
@@ -25,7 +33,7 @@
      */
     data () {
       return {
-        chartType: ['BAR', 'LINE', 'PIE'],
+        chartType: ['BAR', 'HORIZONTAL', 'LINE', 'PIE'],
         issueCountTitle: 'Total Issue Count of This Week',
         issueCount: {
           labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -80,6 +88,55 @@
               stacked: true
             }],
             yAxes: [{
+              stacked: true
+            }]
+          }
+        },
+        jobCompleteTitle: 'Activity Rate of Department',
+        jobComplete: {
+          labels: ['first week', 'second week', 'third week', 'fourth week'],
+          datasets: [
+            {
+              data: [60, 40, 0, 0],
+              backgroundColor: '#0288D1',
+              hoverBackgroundColor: '#0288D1',
+              label: 'Plan'
+            },
+            {
+              data: [25, 30, 0, 0],
+              backgroundColor: '#FFAB00',
+              hoverBackgroundColor: '#FFAB00',
+              label: 'Design'
+            },
+            {
+              data: [15, 30, 0, 0],
+              backgroundColor: '#BF360C',
+              hoverBackgroundColor: '#BF360C',
+              label: 'Development'
+            }
+          ]
+        },
+        jobCompleteOption: {
+          maintainAspectRatio: false,
+          scales: {
+            xAxes: [{
+              stacked: true,
+              ticks: {
+                min: 0,
+                max: 100,
+                stepSize: 10
+              }
+            }],
+            yAxes: [{
+              barThickness: 25,
+              barPercentage: 1.0,
+              categoryPercentage: 1.0,
+              gridLines: {
+                display: false,
+                color: '#fff',
+                zeroLineColor: '#fff',
+                zeroLineWidth: 0
+              },
               stacked: true
             }]
           }

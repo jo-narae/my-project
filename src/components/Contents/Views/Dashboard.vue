@@ -41,21 +41,18 @@
 
     <!-- ETC -->
     <div class="row">
-      <div class="col-md-9 col-xs-12">
+      <div class="col-md-6 col-xs-12">
         <div class="card">
-          <chart-card :dataSet="jobComplete" :defaultOption="jobCompleteOption" :chartTitle="jobCompleteTitle" :chartType="chartType[1]" />
         </div>
       </div>
-      <div class="col-md-3 col-xs-12">
+      <div class="col-md-6 col-xs-12">
         <div class="card">
           <div class="member-list">
             <p class="title chart-title" slot="title" >Members</p>
-            <div ref="memberInfoArea">
-              <div v-for="info in memberInfo" class="member-info">
-                <div class="member-info-data">
-                  <img class="avatar dashboard-avatar" :src="info.image" alt="avatar">
-                  <p class="ellipsis avatar-name">{{info.name}}</p>
-                </div>
+            <div v-for="info in memberInfo" class="member-info">
+              <div class="member-info-data">
+                <img class="avatar dashboard-avatar" :src="info.image" alt="avatar">
+                <p class="ellipsis avatar-name">{{info.name}}</p>
               </div>
             </div>
           </div>
@@ -77,13 +74,8 @@
       StatsCard,
       ChartCard
     },
-    mounted () {
-      // this.memberInfoHeight = this.$refs.memberInfoArea.clientHeight
-      // console.log(this.$refs.resize)
-    },
     data () {
       return {
-        memberInfoHeight: this.$refs.memberInfoArea,
         chartType: ['BAR', 'HORIZONTAL', 'LINE', 'PIE'],
         statsCards: [
           {
@@ -137,55 +129,6 @@
         },
         totalIssueOption: {
           maintainAspectRatio: false
-        },
-        jobCompleteTitle: 'Activity Rate of Department',
-        jobComplete: {
-          labels: ['first week', 'second week', 'third week', 'fourth week'],
-          datasets: [
-            {
-              data: [60, 40, 0, 0],
-              backgroundColor: '#0288D1',
-              hoverBackgroundColor: '#0288D1',
-              label: 'Plan'
-            },
-            {
-              data: [25, 30, 0, 0],
-              backgroundColor: '#FFAB00',
-              hoverBackgroundColor: '#FFAB00',
-              label: 'Design'
-            },
-            {
-              data: [15, 30, 0, 0],
-              backgroundColor: '#BF360C',
-              hoverBackgroundColor: '#BF360C',
-              label: 'Development'
-            }
-          ]
-        },
-        jobCompleteOption: {
-          maintainAspectRatio: false,
-          scales: {
-            xAxes: [{
-              stacked: true,
-              ticks: {
-                min: 0,
-                max: 100,
-                stepSize: 10
-              }
-            }],
-            yAxes: [{
-              barThickness: 25,
-              barPercentage: 1.0,
-              categoryPercentage: 1.0,
-              gridLines: {
-                display: false,
-                color: '#fff',
-                zeroLineColor: '#fff',
-                zeroLineWidth: 0
-              },
-              stacked: true
-            }]
-          }
         },
         memberInfo: [
           { image: 'static/img/faces/face-4.jpg',
