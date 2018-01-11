@@ -57,13 +57,23 @@ hr {
 }
 .department-progress {
   margin-left: 130px;
+  margin-right: 10px;
   max-width: 70%;
 }
 .member-title {
   padding-top: 20px;
   padding-bottom: 5px;
 }
+.notice-title {
+  padding-top: 20px;
+}
 .department-title {
   padding-top: 20px;
   padding-bottom: 40px;
+}
+.table-area {
+  margin-bottom: 10px;
+}
+.middle-area {
+  min-height: 390px; max-height: 390px;
 }

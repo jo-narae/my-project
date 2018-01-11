@@ -1,17 +1,14 @@
 <template>
-  <div class="card">
-    <div class="content">
-      <div class="row">
-        <div class="col-xs-12 col-md-12">
-          <p class="title chart-title" slot="title" v-if="chartTitle" >{{chartTitle}}</p>
-          <bar-chart v-if="chartType == 'BAR'" :data="dataSet" :options="defaultOption" />
-          <horizontal-bar-chart v-if="chartType == 'HORIZONTAL'" :data="dataSet" :options="defaultOption" :height="300" />
-          <line-chart v-if="chartType == 'LINE'" :data="dataSet" :options="defaultOption" />
-          <pie-chart v-if="chartType == 'PIE'" :data="dataSet" :options="defaultOption" :height="300" />
-        </div>
+  <div class="content">
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <p class="title chart-title" slot="title" v-if="chartTitle" >{{chartTitle}}</p>
+        <bar-chart v-if="chartType == 'BAR'" :data="dataSet" :options="defaultOption" />
+        <horizontal-bar-chart v-if="chartType == 'HORIZONTAL'" :data="dataSet" :options="defaultOption" :height="300" />
+        <line-chart v-if="chartType == 'LINE'" :data="dataSet" :options="defaultOption" />
+        <pie-chart v-if="chartType == 'PIE'" :data="dataSet" :options="defaultOption" :height="380" />
       </div>
     </div>
-
   </div>
 </template>
 <script>

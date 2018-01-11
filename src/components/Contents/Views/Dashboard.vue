@@ -23,17 +23,21 @@
     <!--Charts-->
     <div class="row">
       <div class="col-md-6 col-xs-12">
-        <div class="card">
-          최근 피드
+        <div class="card middle-area">
+          <p class="title chart-title notice-title">Notice</p>
+          <div class="table-area">
+            <v-client-table :columns="tableColumns" :data="tableData" :options="tableOptions">
+            </v-client-table>
+          </div>
         </div>
       </div>
       <div class="col-md-3 col-xs-12">
-        <div class="card">
+        <div class="card middle-area">
           <chart-card :dataSet="jobKind" :defaultOption="JobKindOption" :chartTitle="jobKindTitle" :chartType="chartType[3]" />
         </div>
       </div>
       <div class="col-md-3 col-xs-12">
-        <div class="card">
+        <div class="card middle-area">
           <chart-card :dataSet="totalIssue" :defaultOption="totalIssueOption" :chartTitle="totalIssueTitle" :chartType="chartType[3]" />
         </div>
       </div>
@@ -87,6 +91,9 @@
       StatsCard,
       ChartCard
     },
+    mounted () {
+      $('.VuePagination').removeClass('row col-md-12')
+    },
     data () {
       return {
         chartType: ['BAR', 'HORIZONTAL', 'LINE', 'PIE'],
@@ -128,7 +135,6 @@
           labels: ['Design', 'Implement', 'Verification', 'Report', 'Meeting']
         },
         JobKindOption: {
-          maintainAspectRatio: false
         },
         totalIssueTitle: 'Total Issue Count',
         totalIssue: {
@@ -141,7 +147,6 @@
           labels: ['Stay', 'Working', 'Complete', 'Reject', 'Close']
         },
         totalIssueOption: {
-          maintainAspectRatio: false
         },
         memberInfo: [
           { image: 'static/img/faces/face-4.jpg',
@@ -166,7 +171,71 @@
           {name: 'Design', variant: 'info', max: 600, value: 450},
           {name: 'Development', variant: 'warning', max: 600, value: 532},
           {name: 'Q & A', variant: 'danger', max: 600, value: 480}
-        ]
+        ],
+        tableColumns: ['name', 'code', 'uri'],
+        tableData: [
+          {
+            code: 'SB',
+            name: 'Solomon Islands',
+            created_at: '2015-04-24T01:46:50.360631',
+            updated_at: '2015-04-24T01:46:50.360635',
+            uri: 'http://api.lobbyfacts.eu/api/1/country/203',
+            id: 203
+          }, {
+            code: 'SI',
+            name: 'Slovenia',
+            created_at: '2015-04-24T01:46:50.358394',
+            updated_at: '2015-04-24T01:46:50.358399',
+            uri: 'http://api.lobbyfacts.eu/api/1/country/202',
+            id: 202
+          }, {
+            code: 'SK',
+            name: 'Slovakia',
+            created_at: '2015-04-24T01:46:50.356154',
+            updated_at: '2015-04-24T01:46:50.356158',
+            uri: 'http://api.lobbyfacts.eu/api/1/country/201',
+            id: 201
+          }, {
+            code: 'SX',
+            name: 'Sint Maarten',
+            created_at: '2015-04-24T01:46:50.353807',
+            updated_at: '2015-04-24T01:46:50.353811',
+            uri: 'http://api.lobbyfacts.eu/api/1/country/200',
+            id: 200
+          }, {
+            code: 'SG',
+            name: 'Singapore',
+            created_at: '2015-04-24T01:46:50.349354',
+            updated_at: '2015-04-24T01:46:50.349358',
+            uri: 'http://api.lobbyfacts.eu/api/1/country/199',
+            id: 199
+          }, {
+            code: 'SL',
+            name: 'Sierra Leone',
+            created_at: '2015-04-24T01:46:50.347186',
+            updated_at: '2015-04-24T01:46:50.347190',
+            uri: 'http://api.lobbyfacts.eu/api/1/country/198',
+            id: 198
+          }, {
+            code: 'SC',
+            name: 'Seychelles',
+            created_at: '2015-04-24T01:46:50.344980',
+            updated_at: '2015-04-24T01:46:50.344984',
+            uri: 'http://api.lobbyfacts.eu/api/1/country/197',
+            id: 197
+          }, {
+            code: 'RS',
+            name: 'Serbia',
+            created_at: '2015-04-24T01:46:50.342496',
+            updated_at: '2015-04-24T01:46:50.342501',
+            uri: 'http://api.lobbyfacts.eu/api/1/country/196',
+            id: 196
+          }
+        ],
+        tableOptions: {
+          sortable: ['name', 'code'],
+          perPage: 2
+        }
       }
     }
   }

@@ -24,7 +24,8 @@
     "vue-autosize": "^1.0.2",
     "vue-chartjs": "^3.0.2",
     "vue-nav-tabs": "^0.5.6",
-    "vue-router": "^2.2.0"
+    "vue-router": "^2.2.0",
+    "vue-tables-2": "^1.2.41"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
