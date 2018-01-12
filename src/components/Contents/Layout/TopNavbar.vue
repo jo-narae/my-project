@@ -13,7 +13,7 @@
       <div class="navbar-right-menu">
         <ul class="nav navbar-nav navbar-right">
            <drop-down :title="noticeCount" icon="ti-bell" class="hand-cursor">
-             <li v-for="item in noticeList"><a href="#">{{item.titleName}}</a></li>
+             <li v-if="isClicked" v-for="item in noticeList"><a href="#">{{item.titleName}}</a></li>
            </drop-down>
           <li>
             <a href="#" class="btn-rotate">
@@ -38,6 +38,9 @@
     },
     mounted: function () {
       this.initData()
+    },
+    props: {
+      isClicked: false
     },
     data: function () {
       return {

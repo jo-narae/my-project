@@ -6,8 +6,8 @@
     <notifications>
 
     </notifications>
-    <div class="main-panel">
-      <top-navbar></top-navbar>
+    <div class="main-panel" @click="onDomClick">
+      <top-navbar :isClicked="isClicked"></top-navbar>
 
       <contents-content @click.native="toggleSidebar">
 
@@ -30,10 +30,22 @@
       ContentFooter,
       ContentsContent
     },
+    data: function () {
+      return {
+        isClicked: false
+      }
+    },
     methods: {
       toggleSidebar () {
         if (this.$sidebar.showSidebar) {
           this.$sidebar.displaySidebar(false)
+        }
+      },
+      onDomClick (e) {
+        if (e.target.className === 'notification') {
+          this.isClicked = true
+        } else {
+          this.isClicked = false
         }
       }
     }

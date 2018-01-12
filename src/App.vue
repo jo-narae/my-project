@@ -1,11 +1,11 @@
 <template>
-  <div :class="{'nav-open': $sidebar.showSidebar}">
+  <div :class="{'nav-open': $sidebar.showSidebar}" @click="onDomClick">
     <router-view></router-view>
     <!--This sidebar appears only for screens smaller than 992px-->
     <side-bar type="navbar" :sidebar-links="$sidebar.sidebarLinks">
       <ul class="nav navbar-nav">
         <drop-down :title="noticeCount" icon="ti-bell" class="hand-cursor">
-          <li v-for="item in noticeList"><a href="#">{{item.titleName}}</a></li>
+          <li v-if="isClicked" v-for="item in noticeList"><a href="#">{{item.titleName}}</a></li>
         </drop-down>
         <li>
           <a href="#" class="btn-rotate">
@@ -30,7 +30,8 @@
       return {
         activeNotifications: false,
         noticeList: [],
-        noticeCount: '0 Notifications'
+        noticeCount: '0 Notifications',
+        isClicked: true
       }
     },
     methods: {
@@ -45,6 +46,13 @@
         // 리스트 조회 후 값 변환
         this.noticeList = noticeArr
         this.noticeCount = this.noticeCount.replace('0', noticeArr.length)
+      },
+      onDomClick (e) {
+        if (e.target.className === 'notification') {
+          this.isClicked = true
+        } else {
+          this.isClicked = false
+        }
       }
     }
   }
