@@ -7,14 +7,20 @@
     <!-- -->
     <div class="sidebar-wrapper" id="style-3">
       <div class="logo">
-        <a href="#" class="simple-text">
-            <div class="logo-img">
-                <img src="static/img/logo.png" alt="logo">
-            </div>
-          Na-Rae Portfolio
-        </a>
-      </div>
-      <slot>
+        <div class="simple-text">
+          <div class="logo-img float-left">
+              <img src="static/img/logo.png" alt="logo">
+          </div>
+          <ul class="project-list">
+            <drop-menu title="Sample Project" class="hand-cursor">
+              <li class="project-name"><a class="dropdown-menu-item"> <i class="fa fa-start"></i>Sample Project</a></li>
+              <hr>
+              <li><a class="dropdown-menu-item"><i class="fa fa-sign-in"></i> Please Sign-In</a></li>
+            </drop-menu>
+          </ul>
+    </div>
+  </div>
+  <slot>
 
       </slot>
       <ul :class="navClasses">
@@ -100,7 +106,8 @@
 
         windowWidth: 0,
         isWindows: false,
-        hasAutoHeight: false
+        hasAutoHeight: false,
+        isDropMenu: false
       }
     },
     methods: {

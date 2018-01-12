@@ -8,6 +8,7 @@
   position: absolute;
   visibility: hidden;
   z-index: 9000;
+  cursor: pointer;
 
   @include opacity(0);
   @include box-shadow($dropdown-shadow);

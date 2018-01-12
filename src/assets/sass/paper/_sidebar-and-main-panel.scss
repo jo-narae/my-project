@@ -49,7 +49,7 @@
     .simple-text {
       padding: $padding-small-vertical $padding-zero;
       display: block;
-      font-size: $font-size-base;
+      font-size: 14pt;
       text-align: center;
       font-weight: $font-weight-bold;
       line-height: 40px;
@@ -70,6 +70,40 @@
         }
       }
     }
+
+    .float-left {
+      float:left
+    }
+
+    .project-list {
+      p {
+        text-overflow:ellipsis;
+        white-space:nowrap;
+        word-wrap:normal;
+        overflow:hidden;
+        max-width: 70%;
+        cursor: pointer;
+      }
+      a {
+        color: white;
+      }
+      hr {
+        margin: 0px;
+      }
+      .dropdown-menu-item {
+        color: #3d3a36;
+      }
+      .dropdown-menu-item:hover {
+        color: white;
+      }
+    }
+
+    .icon-position {
+      position: fixed;
+      margin-left: 5px;
+      margin-top: 15px;
+    }
+
   }
 
   .nav {
@@ -97,7 +131,7 @@
     p {
       margin: 0;
       line-height: 30px;
-      font-size: 12px;
+      font-size: 11pt;
       font-weight: 600;
       text-transform: uppercase;
     }
